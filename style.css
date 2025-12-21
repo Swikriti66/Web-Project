@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    color: #333;
+}
+
+/* Header */
+.top {
+    background: #17a2a4;
+    color: white;
+    padding: 25px;
+}
+
+.top-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.top img {
+    border-radius: 50%;
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Left column */
+.left {
+    background: white;
+    padding: 20px;
+}
+
+/* Right column */
+.right {
+    background: white;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #17a2a4;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #17a2a4;
+}
+
+/* Skills bars */
+.skill {
+    margin-bottom: 10px;
+}
+
+.bar {
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #17a2a4;
+}
+
+.w80 { width: 80%; }
+.w75 { width: 75%; }
+.w65 { width: 65%; }
+.w60 { width: 60%; }
+
+.exp {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background: #17a2a4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .top-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
