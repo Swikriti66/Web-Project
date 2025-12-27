@@ -2,106 +2,208 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
 }
 
 body {
-    background: #f2f2f2;
-    color: #333;
+    background-color: white;
 }
 
-/* Header */
-.top {
-    background: #17a2a4;
-    color: white;
-    padding: 25px;
-}
 
-.top-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.top img {
-    border-radius: 50%;
-}
-
-/* Layout */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    max-width: 1000px;
-    margin: 20px auto;
-    gap: 20px;
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
 }
 
-/* Left column */
 .left {
-    background: white;
-    padding: 20px;
+    width: 50%;
+    padding: 60px;
 }
 
-/* Right column */
-.right {
-    background: white;
-    padding: 20px;
+.logo {
+    color: blue;
+    margin-bottom: 40px;
+    font-size: 20px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #17a2a4;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #17a2a4;
-}
-
-/* Skills bars */
-.skill {
-    margin-bottom: 10px;
-}
-
-.bar {
-    background: #ddd;
-    height: 8px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.fill {
-    height: 100%;
-    background: #17a2a4;
-}
-
-.w80 { width: 80%; }
-.w75 { width: 75%; }
-.w65 { width: 65%; }
-.w60 { width: 60%; }
-
-.exp {
+.left h1 {
+    color: blue;
     margin-bottom: 15px;
 }
 
-/* Footer */
-.footer {
-    background: #17a2a4;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.subtitle {
+    color: grey;
+    margin-bottom: 30px;
 }
 
-/* Responsive */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.options a {
+    color: blue;
+    text-decoration: none;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.login-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+    padding: 10px 25px;
+    border-radius: 5px;
+    
+   
+    cursor: pointer;
+}
+
+.social-text {
+    margin-top: 40px;
+    color: grey;
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    margin-right: 15px;
+    color: blue;
+    text-decoration: none;
+}
+
+
+.right {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.navbar {
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;      
+    font-weight: 500;
+}
+
+
+
+
+.right img {
+    width: 180%;
+    max-width: 1000px;
+    margin-top: 2px;
+}
+
+
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
-    .top-content {
-        flex-direction: column;
-        text-align: center;
+    .left,
+    .right {
+        width: 100%;
     }
+
+    .navbar {
+        justify-content: center;
+    }
+}
+
+.navbar {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;   
+    gap: 40px;
+}
+.emai-section {
+    color: rgb(194, 102, 255);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: #555;   
+    font-size: 15px;
+}
+
+.navbar a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #3f51ff; 
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 48px;                 
+    padding: 0 16px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #e5e5e5;    
+    border-radius: 6px;           
+    background-color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #b5b5b5;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3f51ff;        
 }
